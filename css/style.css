@@ -1,0 +1,743 @@
+body {
+  margin: 0 auto;
+}
+
+@-webkit-keyframes pulldown {
+  0% {
+    top: 3.5%;
+  }
+  100% {
+    top: 20%;
+  }
+}
+
+@keyframes pulldown {
+  0% {
+    top: 3.5%;
+  }
+  100% {
+    top: 20%;
+  }
+}
+
+@-webkit-keyframes ballpulldown {
+  0% {
+    top: 47%;
+  }
+  100% {
+    top: 63.5%;
+  }
+}
+
+@keyframes ballpulldown {
+  0% {
+    top: 47%;
+  }
+  100% {
+    top: 63.5%;
+  }
+}
+
+@-webkit-keyframes glovingstar {
+  0% {
+    opacity: 0;
+    color: aqua;
+  }
+  100% {
+    opacity: 1;
+    color: #fdbb2d;
+  }
+}
+
+@keyframes glovingstar {
+  0% {
+    opacity: 0;
+    color: aqua;
+  }
+  100% {
+    opacity: 1;
+    color: #fdbb2d;
+  }
+}
+
+@-webkit-keyframes moon_glove {
+  0% {
+    -webkit-box-shadow: 0 0 0px aqua;
+            box-shadow: 0 0 0px aqua;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 40px aqua;
+            box-shadow: 0 0 40px aqua;
+  }
+}
+
+@keyframes moon_glove {
+  0% {
+    -webkit-box-shadow: 0 0 0px aqua;
+            box-shadow: 0 0 0px aqua;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 40px aqua;
+            box-shadow: 0 0 40px aqua;
+  }
+}
+
+@-webkit-keyframes sun_glove {
+  0% {
+    -webkit-box-shadow: 0 0 0px #fdbb2d;
+            box-shadow: 0 0 0px #fdbb2d;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 40px #fdbb2d;
+            box-shadow: 0 0 40px #fdbb2d;
+  }
+}
+
+@keyframes sun_glove {
+  0% {
+    -webkit-box-shadow: 0 0 0px #fdbb2d;
+            box-shadow: 0 0 0px #fdbb2d;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 40px #fdbb2d;
+            box-shadow: 0 0 40px #fdbb2d;
+  }
+}
+
+@-webkit-keyframes shooting_star {
+  0% {
+    opacity: 1;
+    top: 0;
+    left: 10%;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  20% {
+    top: 90%;
+    left: 40%;
+    opacity: 0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    text-shadow: -12px -9px 20px aqua;
+  }
+  30% {
+    top: 50%;
+    left: 90%;
+    opacity: 0;
+    text-shadow: none;
+  }
+  50% {
+    opacity: 1;
+  }
+  65% {
+    text-shadow: -12px -9px 20px aqua;
+    top: 80%;
+    left: 10%;
+    opacity: 0;
+  }
+}
+
+@keyframes shooting_star {
+  0% {
+    opacity: 1;
+    top: 0;
+    left: 10%;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  20% {
+    top: 90%;
+    left: 40%;
+    opacity: 0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    text-shadow: -12px -9px 20px aqua;
+  }
+  30% {
+    top: 50%;
+    left: 90%;
+    opacity: 0;
+    text-shadow: none;
+  }
+  50% {
+    opacity: 1;
+  }
+  65% {
+    text-shadow: -12px -9px 20px aqua;
+    top: 80%;
+    left: 10%;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes nightcloud {
+  0% {
+    opacity: 1;
+    top: 67%;
+    left: 60%;
+  }
+  100% {
+    opacity: 1;
+    left: 5%;
+  }
+}
+
+@keyframes nightcloud {
+  0% {
+    opacity: 1;
+    top: 67%;
+    left: 60%;
+  }
+  100% {
+    opacity: 1;
+    left: 5%;
+  }
+}
+
+@-webkit-keyframes cube_spin {
+  0% {
+    -webkit-transform: rotateX(-30deg) rotateY(0deg);
+            transform: rotateX(-30deg) rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(-30deg) rotateY(360deg);
+            transform: rotateX(-30deg) rotateY(360deg);
+  }
+}
+
+@keyframes cube_spin {
+  0% {
+    -webkit-transform: rotateX(-30deg) rotateY(0deg);
+            transform: rotateX(-30deg) rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(-30deg) rotateY(360deg);
+            transform: rotateX(-30deg) rotateY(360deg);
+  }
+}
+
+.dayornight {
+  display: none;
+}
+
+.nightwindow {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #483d8b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.nightwindow_frame {
+  height: 450px;
+  width: 310px;
+  border: 10px solid #6a5acd;
+  background: #020024;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(22%, #020024), to(#eb34ac));
+  background: linear-gradient(180deg, #020024 22%, #eb34ac 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#eb34ac",GradientType=1);
+  position: relative;
+}
+
+.nightwindow_frame_curtain {
+  position: relative;
+  z-index: 5;
+  margin: 6px 5px 6px 5px;
+  height: 7px;
+  width: auto;
+  background: #6a5acd;
+  border: 1px solid aqua;
+}
+
+.nightwindow_frame_rope {
+  position: absolute;
+  z-index: 2;
+  left: 5%;
+  top: 3.5%;
+  z-index: 4;
+  height: 200px;
+  width: 2px;
+  background: aqua;
+  background: -webkit-gradient(linear, left top, left bottom, from(aqua), to(#fdbb2d));
+  background: linear-gradient(180deg, aqua 0%, #fdbb2d 100%);
+}
+
+.nightwindow_frame_circle {
+  position: absolute;
+  z-index: 2;
+  left: 60%;
+  top: 20%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: aqua;
+  -webkit-animation-name: moon_glove;
+          animation-name: moon_glove;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.nightwindow_frame_windowsill {
+  z-index: 5;
+  position: absolute;
+  max-width: 350px;
+  width: 375px;
+  height: 35px;
+  background: #6a5acd;
+  border: 2px solid aqua;
+  top: 97%;
+  left: -7.5%;
+}
+
+.nightwindow_frame_windowsill_smaller {
+  z-index: 4;
+  position: absolute;
+  max-width: 350px;
+  width: 300px;
+  height: 25px;
+  background: #6a5acd;
+  border: 2px solid aqua;
+  top: 103%;
+  left: 1%;
+}
+
+.nightwindow_frame_pot {
+  z-index: 4;
+  height: 0;
+  width: 30px;
+  border-bottom: 30px solid #483d8b;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  position: absolute;
+  top: 91%;
+  left: 65%;
+}
+
+.nightwindow_frame_stick {
+  z-index: 3;
+  height: 50px;
+  width: 5px;
+  background: #483d8b;
+  border-left: 1px solid aqua;
+  position: absolute;
+  left: 74%;
+  top: 80%;
+}
+
+.nightwindow_frame_leaf {
+  position: absolute;
+  z-index: 4;
+  width: 30px;
+  height: 30px;
+  border-radius: 0 70%;
+  background: #483d8b;
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+  top: 79%;
+  left: 76%;
+}
+
+.nightwindow_frame_ball {
+  display: block;
+  z-index: 5;
+  position: absolute;
+  left: 3.73%;
+  top: 47%;
+  height: 10px;
+  width: 10px;
+  background: aqua;
+  background: -webkit-gradient(linear, left top, left bottom, from(aqua), to(#fdbb2d));
+  background: linear-gradient(180deg, aqua 0%, #fdbb2d 100%);
+  border-radius: 50%;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.nightwindow_frame_ball:hover {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+}
+
+.dayornight:checked ~ .nightwindow_frame {
+  background: #ddef21;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ddef21), color-stop(50%, #d61c0c));
+  background: linear-gradient(0deg, #ddef21 0%, #d61c0c 50%);
+}
+
+.dayornight:checked ~ .nightwindow_frame .nightwindow_frame_curtain {
+  border: 1px solid #fdbb2d;
+}
+
+.dayornight:checked ~ .nightwindow_frame .nightwindow_frame_circle {
+  background: #fdbb2d;
+}
+
+.dayornight:checked ~ .nightwindow_frame .nightwindow_frame_windowsill {
+  border: 2px solid #fdbb2d;
+}
+
+.dayornight:checked ~ .nightwindow_frame .nightwindow_frame_windowsill_smaller {
+  border: 2px solid #fdbb2d;
+}
+
+.dayornight:checked ~ .nightwindow_frame .nightwindow_frame_stick {
+  border-left: 1px solid red;
+}
+
+.dayornight:checked ~ .nightwindow_frame .nightwindow_frame_rope {
+  -webkit-animation-name: pulldown;
+          animation-name: pulldown;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-iteration-count: 2;
+          animation-iteration-count: 2;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.dayornight:checked ~ .nightwindow_frame .nightwindow_frame_ball {
+  -webkit-animation-name: ballpulldown;
+          animation-name: ballpulldown;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-iteration-count: 2;
+          animation-iteration-count: 2;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.dayornight:checked ~ .nightwindow_frame .static_star {
+  display: none;
+}
+
+.dayornight:checked ~ .nightwindow_frame .shooting_star {
+  display: none;
+}
+
+.dayornight:checked ~ .nightwindow_frame .nightwindow_frame_circle {
+  -webkit-animation-name: sun_glove;
+          animation-name: sun_glove;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.dayornight:checked ~ .nightwindow_frame .cloud_left {
+  background: #e20000;
+  background: -webkit-gradient(linear, left bottom, left top, from(#e20000), to(#eea80f));
+  background: linear-gradient(0deg, #e20000 0%, #eea80f 100%);
+  ilter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e20000",endColorstr="#eea80f",GradientType=1);
+}
+
+.dayornight:checked ~ .nightwindow_frame .cloud_center {
+  background: #e20000;
+  background: -webkit-gradient(linear, left bottom, left top, from(#e20000), to(#eea80f));
+  background: linear-gradient(0deg, #e20000 0%, #eea80f 100%);
+  ilter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e20000",endColorstr="#eea80f",GradientType=1);
+}
+
+.dayornight:checked ~ .nightwindow_frame .cloud_right {
+  background: #e20000;
+  background: -webkit-gradient(linear, left bottom, left top, from(#e20000), to(#eea80f));
+  background: linear-gradient(0deg, #e20000 0%, #eea80f 100%);
+  ilter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e20000",endColorstr="#eea80f",GradientType=1);
+}
+
+.static_star {
+  opacity: 0;
+  font-size: 15px;
+  -webkit-animation-name: glovingstar;
+          animation-name: glovingstar;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  border-radius: 50%;
+}
+
+.static_star1 {
+  position: absolute;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  z-index: 1;
+  left: 50%;
+  top: 47%;
+}
+
+.static_star2 {
+  position: absolute;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  z-index: 1;
+  left: 20%;
+  top: 30%;
+}
+
+.static_star3 {
+  position: absolute;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+  z-index: 1;
+  left: 10%;
+  top: 37%;
+}
+
+.static_star3 {
+  position: absolute;
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+  z-index: 1;
+  left: 80%;
+  top: 60%;
+}
+
+.static_star4 {
+  position: absolute;
+  -webkit-animation-delay: 4.5s;
+          animation-delay: 4.5s;
+  z-index: 1;
+  left: 20%;
+  top: 55%;
+}
+
+.static_star5 {
+  position: absolute;
+  -webkit-animation-delay: 5.5s;
+          animation-delay: 5.5s;
+  z-index: 1;
+  left: 40%;
+  top: 40%;
+}
+
+.static_star6 {
+  position: absolute;
+  -webkit-animation-delay: 6.5s;
+          animation-delay: 6.5s;
+  z-index: 1;
+  left: 5%;
+  top: 44%;
+}
+
+.static_star6 {
+  position: absolute;
+  -webkit-animation-delay: 7.5s;
+          animation-delay: 7.5s;
+  z-index: 1;
+  left: 33%;
+  top: 33%;
+}
+
+.static_star7 {
+  position: absolute;
+  z-index: 1;
+  left: 14%;
+  top: 43%;
+}
+
+.shooting_star {
+  z-index: 2;
+  position: absolute;
+  font-size: 30px;
+  color: white;
+  top: 0;
+  left: 10%;
+  opacity: 0;
+  -webkit-animation-name: shooting_star;
+          animation-name: shooting_star;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+}
+
+.cloud {
+  position: absolute;
+  z-index: 6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  top: 67%;
+  left: 60%;
+  -webkit-animation-name: nightcloud;
+          animation-name: nightcloud;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.cloud_left {
+  border-radius: 50% 50% 0 15%;
+  height: 30px;
+  width: 30px;
+  background: #482cf4;
+  background: -webkit-gradient(linear, left top, left bottom, from(#482cf4), to(#d91ae0));
+  background: linear-gradient(180deg, #482cf4 0%, #d91ae0 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#482cf4",endColorstr="#d91ae0",GradientType=1);
+}
+
+.cloud_center {
+  border-radius: 50% 50% 0 0;
+  height: 40px;
+  width: 40px;
+  background: #482cf4;
+  background: -webkit-gradient(linear, left top, left bottom, from(#482cf4), to(#d91ae0));
+  background: linear-gradient(180deg, #482cf4 0%, #d91ae0 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#482cf4",endColorstr="#d91ae0",GradientType=1);
+}
+
+.cloud_right {
+  border-radius: 50% 50% 15% 0;
+  height: 23px;
+  width: 25px;
+  background: #482cf4;
+  background: -webkit-gradient(linear, left top, left bottom, from(#482cf4), to(#d91ae0));
+  background: linear-gradient(180deg, #482cf4 0%, #d91ae0 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#482cf4",endColorstr="#d91ae0",GradientType=1);
+}
+
+.notification {
+  margin-top: 60px;
+  font-family: 'Oswald', sans-serif;
+  color: aqua;
+}
+
+.dayornight:checked ~ .notification {
+  color: #fdbb2d;
+}
+
+.new_animation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 120vh;
+  background: #050505;
+}
+
+.cube {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateX(-30deg);
+          transform: rotateX(-30deg);
+  -webkit-animation-name: cube_spin;
+          animation-name: cube_spin;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.cube_top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  -webkit-transform: rotateX(90deg) translateZ(150px);
+          transform: rotateX(90deg) translateZ(150px);
+  background: #222;
+}
+
+.cube_walls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.cube_walls_span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#151515), to(#00ec00));
+  background: linear-gradient(#151515, #00ec00);
+  -webkit-transform: rotateY(calc(90deg*var(--i))) translateZ(150px);
+          transform: rotateY(calc(90deg*var(--i))) translateZ(150px);
+}
+
+.cube_bottom {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: #0f0;
+  top: 0;
+  left: 0;
+  -webkit-transform: rotateX(90deg) translateZ(-350px);
+          transform: rotateX(90deg) translateZ(-350px);
+  -webkit-filter: blur(40px);
+          filter: blur(40px);
+}
+
+.cube_text {
+  color: #0f0;
+  font-family: 'Oswald', sans-serif;
+  margin-top: 70px;
+  margin-bottom: 150px;
+}
+/*# sourceMappingURL=style.css.map */
